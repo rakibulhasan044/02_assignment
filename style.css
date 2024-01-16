@@ -2,11 +2,16 @@
     margin: 0;
     padding: 0;
     font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
 }
 body {
     background-color: #d3d3d3aa;
     /* background-color: 	#7c68ee3b; */
     /* background-color: #3c4c1b29; */
+}
+
+.hide {
+    display: none;
 }
 
 header {
@@ -258,10 +263,37 @@ section {
     background-size: cover;
 }
 
+.hot-deals {
+    text-align: center;
+}
+
+.hot-deals h1 {
+    margin-bottom: 20px;
+}
+
+.deals-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.deals-box {
+    border-radius: 16px;
+    text-align: left;
+}
+
+.deals-box p, h4 {
+    padding: 20px;
+
+}
+
+.deals-box img{
+    width: 100%;
+}
 
 
-
-@media screen and (max-width:576px) {
+@media screen and (max-width:600px) {
 
     header {
         margin: 0 5px;
@@ -322,10 +354,6 @@ section {
         font-size: 1.8rem;
     }
 
-    .primary-text {
-        font-size: 1rem;
-    }
-
     .destination-places {
        grid-template-columns: repeat(1, 1fr);
        grid-template-rows: auto;
@@ -358,6 +386,16 @@ section {
 
     .bandarban {
         grid-column: auto;
+    }
+
+    .deals-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .hot-deals h1 {
+        margin-bottom: 10px;
     }
 }
 
@@ -434,5 +472,9 @@ section {
  
      .bandarban {
          grid-column: 1/3;
+     }
+
+     .deals-container {
+        margin-bottom: 20px;
      }
 }
