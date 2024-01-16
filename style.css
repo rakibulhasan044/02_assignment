@@ -4,15 +4,6 @@
     font-family: 'Mulish', sans-serif;
     box-sizing: border-box;
 }
-body {
-    background-color: #d3d3d3aa;
-    /* background-color: 	#7c68ee3b; */
-    /* background-color: #3c4c1b29; */
-}
-
-.hide {
-    display: none;
-}
 
 header {
     max-width: 1250px;
@@ -66,6 +57,12 @@ nav {
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 26px;
+}
+
+.orange-list {
+    color: #FF5400;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .orange-list > a{
@@ -292,6 +289,225 @@ section {
     width: 100%;
 }
 
+.why-us {
+    text-align: center;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.black-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.hotel-box {
+    grid-column: 1/3;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 181, 99, 0.20);
+    background: rgba(251, 181, 99, 0.05);
+    padding: 50px;
+}
+
+.service-box {
+    grid-column: 3/5;
+    border-radius: 16px;
+    border: 1px solid rgba(41, 206, 246, 0.20);
+    background: rgba(41, 206, 246, 0.05);
+    padding: 50px;
+}
+
+.price-box {
+    grid-column: 2/4;
+    border-radius: 16px;
+    border: 1px solid rgba(233, 68, 68, 0.20);
+    background: rgba(233, 68, 68, 0.05);
+    padding: 50px;
+}
+
+/* deals and discount */
+
+.discount {
+    text-align: center;
+}
+.discount-container {
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    gap: 20px;
+
+}
+
+.discount-box-1 {
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    height: 500px;
+    background: url(assets/images/Group\ 39.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 16px;
+    padding-right: 60px;
+}
+
+.discount-box-2{
+    display: flex;
+    align-items:center;
+    height: 500px;
+    background: url(assets/images/Group\ 40.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 16px;
+    padding-left: 60px;
+}
+
+.discount-content {
+    text-align: left;
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(1.5px);
+    /* margin-right: 50px; */
+    padding: 50px;
+}
+
+.discount-content > .primary-btn {
+    margin-top: 10px;
+}
+
+.discount > .primary-btn {
+    margin-top: 10px;
+}
+
+.place-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    height: auto;
+    /* border: 2px solid black; */
+}
+/* .place-box {
+    border: 2px solid yellow;
+} */
+
+.place-content {
+    padding: 50px 0;
+    padding: 10px;
+}
+.place-content li {
+    list-style-position: inside;
+
+}
+
+.place-content > .primary-btn {
+    margin-top: 10px;
+}
+.white-title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.place-content {
+    height: 400px;
+}
+.place-video {
+    position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+    
+}
+
+.place-video-2 > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sub-container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.sub-img {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.top-img {
+    /* width: 100%; */
+}
+.bottom-img {
+    position: absolute;
+}
+
+.sub-form {
+    padding: 20px;
+}
+.sub-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.sub-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(19, 19, 24, 0.05);
+}
+
+.sub-form > form > button {
+    width: 100%;
+    padding: 10px;
+}
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 150px;
+    background: rgba(19, 19, 24, 0.05);
+}
+
+.footer-logo {
+    display: block;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.footer-content > ul {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 50px 400px;
+}
+
+.footer-content > ul > li {
+    font-size: 2rem;
+    list-style: none;
+}
+footer .copy {
+    margin: 50px 0;
+}
 
 @media screen and (max-width:600px) {
 
@@ -331,7 +547,7 @@ section {
     }
 
     .form-content input {
-        width: 225px;
+        width: 260px;
         padding: 15px ;
     }
 
@@ -397,6 +613,63 @@ section {
     .hot-deals h1 {
         margin-bottom: 10px;
     }
+
+    .service-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .hotel-box {
+        grid-column: auto;
+    }
+
+    .service-box {
+        grid-column: auto;
+    }
+
+    .price-box {
+        grid-column: auto;
+    }
+
+    /*  */
+    .discount-box-1 {
+        justify-content: center;
+        padding: 0 20px;
+        padding-top: 30%;
+
+    }
+    
+    .discount-box-2{
+        justify-content: center;
+        padding: auto;
+        padding: 0 20px;
+        padding-top: 30%;
+    }
+    
+    .discount-content {
+        padding: 20px;
+    }
+
+    .place-container {
+    grid-template-columns: repeat(1,1fr);
+    }
+
+    .sub-container {
+        flex-direction: column;
+        position: relative;
+    }
+    
+    footer {
+        padding: 50px;
+    }
+    .footer-content > ul {
+
+        margin: 40px 50px;
+        
+    }
+    
 }
 
 
@@ -477,4 +750,31 @@ section {
      .deals-container {
         margin-bottom: 20px;
      }
+
+     .discount-box-1 {
+        padding-left:10px;
+        padding-right: 50px
+        
+    }
+    
+    .discount-box-2{
+        padding-left:50px;
+        padding-right: 10px
+    }
+        .discount-content {
+            padding: 40px
+    }
+    .sub-container {
+        flex-direction: column;
+        position: relative;
+    }
+
+    footer {
+        padding: 100px;
+    }
+    .footer-content > ul {
+        
+        margin: 40px 100px;
+        
+    }
 }
