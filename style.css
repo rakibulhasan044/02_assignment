@@ -109,7 +109,7 @@ nav {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.30);
     display: flex;
-    gap: 1.5rem;
+    gap: 20px;
     padding: 10px;
 }
 
@@ -122,9 +122,9 @@ nav {
     cursor: pointer;
 }
 
-.form-content input {
+/* .form-content input {
     width: 146px;
-}
+} */
 
 .primary-btn {
     width: 160px;
@@ -165,7 +165,6 @@ section {
     color: #131318;
     font-size: 2.5rem;
     font-weight: 800;
-    /* padding: 5px 0; */
 }
 
 .primary-text {
@@ -332,11 +331,11 @@ section {
 .discount {
     text-align: center;
 }
+
 .discount-container {
     display: grid;
     grid-template-columns: (2, 1fr);
     gap: 20px;
-
 }
 
 .discount-box-1 {
@@ -367,6 +366,7 @@ section {
 }
 
 .discount-content {
+    max-width: 60%;
     text-align: left;
     border-radius: 16px;
     border: 2px solid #FFF;
@@ -389,24 +389,21 @@ section {
     grid-template-columns: repeat(2,1fr);
     gap:20px;
     height: auto;
-    /* border: 2px solid black; */
 }
-/* .place-box {
-    border: 2px solid yellow;
-} */
 
 .place-content {
     padding: 50px 0;
     padding: 10px;
 }
+
 .place-content li {
     list-style-position: inside;
-
 }
 
 .place-content > .primary-btn {
     margin-top: 10px;
 }
+
 .white-title {
     font-size: 1.5rem;
     color: white;
@@ -415,12 +412,12 @@ section {
 .place-content {
     height: 400px;
 }
+
 .place-video {
     position: relative;
   width: 100%;
   height: 450px;
-  overflow: hidden;
-    
+  overflow: hidden; 
 }
 
 .place-video-2 > video {
@@ -434,29 +431,31 @@ section {
 }
 
 .sub-container {
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
+
 
 .sub-img {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.top-img {
-    /* width: 100%; */
-}
-.bottom-img {
-    position: absolute;
+    background: url(assets/images/Rectangle\ 8\ \(1\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
 }
 
 .sub-form {
     padding: 20px;
 }
+
+.sub-img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
 .sub-form form {
     display: flex;
     flex-direction: column;
@@ -475,7 +474,6 @@ section {
     width: 100%;
     padding: 10px;
 }
-
 
 footer {
     width: 100%;
@@ -498,15 +496,19 @@ footer {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    margin: 50px 400px;
+    margin: 50px 200px;
 }
 
 .footer-content > ul > li {
-    font-size: 2rem;
+    font-size: 2.5rem;
     list-style: none;
 }
 footer .copy {
     margin: 50px 0;
+}
+
+.footer-content > .primary-text {
+    margin-top: 20px;
 }
 
 @media screen and (max-width:600px) {
@@ -633,23 +635,22 @@ footer .copy {
         grid-column: auto;
     }
 
-    /*  */
     .discount-box-1 {
         justify-content: center;
         padding: 0 20px;
-        padding-top: 30%;
-
+        padding-top: 20%;
     }
     
-    .discount-box-2{
+    .discount-box-2 {
         justify-content: center;
         padding: auto;
         padding: 0 20px;
-        padding-top: 30%;
+        padding-top: 20%;
     }
     
     .discount-content {
         padding: 20px;
+        max-width: 100%;
     }
 
     .place-container {
@@ -657,17 +658,19 @@ footer .copy {
     }
 
     .sub-container {
-        flex-direction: column;
-        position: relative;
+        grid-template-columns: repeat(1, 1fr);
     }
     
     footer {
-        padding: 50px;
+        padding: 30px 40px;
     }
     .footer-content > ul {
 
-        margin: 40px 50px;
-        
+        margin: 20px 50px;
+    }
+
+    .footer-content > ul > li {
+        font-size: 2rem;
     }
     
 }
@@ -688,15 +691,22 @@ footer .copy {
     }
 
     .form-content .primary-btn, select {
-        width: 150px;
+        width: 120px;
     }
 
     .form-content input {
-        width: 136px;
+        width: 106px;
+    }
+    
+    .form-content {
+        gap: 15px;
+    }
+
+    .white-text {
+        width: 580px;
     }
 
     section {
-        /* margin: 70px 5px 0 5px; */
         margin-top: 70px;
         margin-left: min(10px, 5%);
         margin-right: min(10px, 5%);
@@ -720,31 +730,31 @@ footer .copy {
      }
  
      .maldives {
-         grid-column: 1/3;
+        grid-column: 1/3;
      }
  
-     .indonesia{
-         grid-column: auto;
+     .indonesia {
+        grid-column: auto;
      }
  
-     .srilanka{
-         grid-column: auto;
+     .srilanka {
+        grid-column: auto;
      }
  
      .usa {
-         grid-column: 1/3;
+        grid-column: 1/3;
      }
  
      .kashmir {
-         grid-column: auto;
+        grid-column: auto;
      }
  
      .bd {
-         grid-column: auto;
+        grid-column: auto;
      }
  
      .bandarban {
-         grid-column: 1/3;
+        grid-column: 1/3;
      }
 
      .deals-container {
@@ -754,15 +764,14 @@ footer .copy {
      .discount-box-1 {
         padding-left:10px;
         padding-right: 50px
-        
     }
     
-    .discount-box-2{
+    .discount-box-2 {
         padding-left:50px;
         padding-right: 10px
     }
         .discount-content {
-            padding: 40px
+        padding: 40px
     }
     .sub-container {
         flex-direction: column;
@@ -770,11 +779,16 @@ footer .copy {
     }
 
     footer {
-        padding: 100px;
+        padding: 60px 90px;
     }
+
     .footer-content > ul {
         
-        margin: 40px 100px;
-        
+        margin: 40px 80px;
+    }
+
+    .sub-img img {
+        height: 140px;
+        width: 250px;
     }
 }
